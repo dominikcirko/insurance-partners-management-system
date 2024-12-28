@@ -13,13 +13,13 @@ public partial class insurancepartnersdbContext : DbContext
     {
     }
 
-    public virtual DbSet<PartnerInfo> PartnerInfos { get; set; }
+    public virtual DbSet<Partner> PartnerInfos { get; set; }
 
-    public virtual DbSet<PolicyInfo> PolicyInfos { get; set; }
+    public virtual DbSet<Policy> PolicyInfos { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.Entity<PartnerInfo>(entity =>
+        modelBuilder.Entity<Partner>(entity =>
         {
             entity.HasKey(e => e.IdPartner).HasName("PK__PartnerI__6A42E6696C969925");
 
@@ -29,7 +29,7 @@ public partial class insurancepartnersdbContext : DbContext
             entity.Property(e => e.PartnerNumber).IsFixedLength();
         });
 
-        modelBuilder.Entity<PolicyInfo>(entity =>
+        modelBuilder.Entity<Policy>(entity =>
         {
             entity.HasKey(e => e.IdPolicy).HasName("PK__PolicyIn__8E3FBE8EAA4EC561");
         });

@@ -8,9 +8,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace insurance_partners_management_system.Models;
 
-[Table("PartnerInfo")]
+[Table("Partner")]
 [Index("ExternalCode", Name = "UQ__PartnerI__A93D2634D2443DDB", IsUnique = true)]
-public partial class PartnerInfo
+public partial class Partner
 {
     [Key]
     public int IdPartner { get; set; }
