@@ -1,0 +1,6 @@
+@insurance_partners_management_system_HostAddress = http://localhost:5083
+
+GET {{insurance_partners_management_system_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
